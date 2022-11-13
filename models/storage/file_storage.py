@@ -2,6 +2,8 @@
 '''File Storage'''
 import json
 from models.librarify_base import LibrarifyBase
+from models.user import User
+from models.book import Book
 
 
 class FileStorage:
@@ -9,7 +11,7 @@ class FileStorage:
 
     __file_path = 'librarify.json'
     __objects = {}
-    class_dict = {"LibrarifyBase":LibrarifyBase}
+    class_dict = {"LibrarifyBase":LibrarifyBase, "User":User, "Book":Book}
 
     def all(self):
         '''Return dictionary of <class>.<id> : object instance'''
