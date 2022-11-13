@@ -1,8 +1,9 @@
+#!/usr/bin/python3
 from datetime import datetime
 import uuid
 from datetime import datetime
 import models
-
+        
 class LibrarifyBase:
     """Base class for Librarify project
     Methods:
@@ -64,8 +65,3 @@ class LibrarifyBase:
             else:
                 dictFormat[key] = value
         return  dictFormat
-
-
-
-me = LibrarifyBase()
-print(me)
