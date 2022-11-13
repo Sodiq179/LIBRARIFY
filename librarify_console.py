@@ -7,13 +7,14 @@ from models import storage
 from models.librarify_base import LibrarifyBase
 from models.user import User
 from models.book import Book
+from models.book_review import Review
 
 class LibrarifyCommand(cmd.Cmd):
     """
     Entry to command interpreter
     """
     prompt = "(librarify) "
-    classes = {"LibrarifyBase","User","Book"}
+    classes = {"LibrarifyBase","User","Book","Review"}
 
     def do_EOF(self, line):
         """Exit on Ctrl-D"""
