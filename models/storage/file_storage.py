@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-'''File Storage'''
+"""This is the file storage class for LIBRARIFY"""
 import json
 from models.librarify_base import LibrarifyBase
 from models.user import User
 from models.book import Book
 from models.book_review import Review
+import shlex
 
 
 class FileStorage:
@@ -15,9 +16,22 @@ class FileStorage:
     class_dict = {"LibrarifyBase":LibrarifyBase, "User":User,
                     "Book":Book, "Review":Review}
 
-    def all(self):
-        '''Return dictionary of <class>.<id> : object instance'''
-        return self.__objects
+    def all(self, cls=None):
+        """returns a dictionary
+        Return:
+            returns a dictionary of __object
+        """
+        dic = {}
+        if cls:
+            dictionary = self.__objects
+            for key in dictionary:
+                partition = key.replace('.', ' ')
+                partition = shlex.split(partition)
+                if (partition[0] == cls.__name__):
+                    dic[key] = self.__objects[key]
+            return (dic)
+        else:
+            return self.__objects
 
     def new(self, obj):
         '''Add new obj to existing dictionary of instances'''
@@ -45,3 +59,10 @@ class FileStorage:
                 self.__objects[key] = obj
         except FileNotFoundError:
             pass
+
+    def delete(self, obj=None):
+        """ delete an existing element
+        """
+        if obj:
+            key = "{}.{}".format(type(obj).__name__, obj.id)
+            del self.__objects[key]
