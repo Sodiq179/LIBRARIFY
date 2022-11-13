@@ -8,6 +8,7 @@ from models.librarify_base import LibrarifyBase
 from models.user import User
 from models.book import Book
 from models.book_review import Review
+from shlex import split
 
 class LibrarifyCommand(cmd.Cmd):
     """
@@ -30,17 +31,33 @@ class LibrarifyCommand(cmd.Cmd):
         pass
 
     def do_create(self, line):
-        """Create instance specified by user
-        Example: create LibrarifyBase
+        """Creates a new instance of BaseModel, saves it
+        Exceptions:
+            SyntaxError: when there is no args given
+            NameError: when there is no object taht has the name
         """
-        if len(line) == 0:
+        try:
+            if not line:
+                raise SyntaxError()
+            my_list = line.split(" ")
+            obj = eval("{}()".format(my_list[0]))
+            print("{}".format(obj.id))
+            for num in range(1, len(my_list)):
+                my_list[num] = my_list[num].replace('=', ' ')
+                attributes = split(my_list[num])
+                attributes[1] = attributes[1].replace('_', ' ')
+                try:
+                    var = eval(attributes[1])
+                    attributes[1] = var
+                except:
+                    pass
+                if type(attributes[1]) is not tuple:
+                    setattr(obj, attributes[0], attributes[1])
+            obj.save()
+        except SyntaxError:
             print("** class name missing **")
-        elif line not in LibrarifyCommand.classes:
+        except NameError:
             print("** class doesn't exist **")
-        else:
-            instance = eval(line)()
-            instance.save()
-            print(instance.id)
 
     def do_show(self, line):
         """Print string representation: name and id
