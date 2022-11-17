@@ -38,7 +38,7 @@ This repository constains the following files:
 ## Installation :hammer_and_wrench:
 Clone the repository and run the console.py
 ```
-$ git clone https://github.com/Sodiq179/AirBnB_clone.git
+$ git clone https://github.com/Sodiq179/LIBRARIFY.git
 ```
 
 ## Usage :wrench:
