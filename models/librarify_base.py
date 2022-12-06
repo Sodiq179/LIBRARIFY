@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-from datetime import datetime
 import uuid
 from datetime import datetime
 import models
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String, DateTime
+
+Base = declarative_base()
         
 class LibrarifyBase:
     """Base class for Librarify project
@@ -13,6 +16,11 @@ class LibrarifyBase:
         __repr__(self)
         to_dict(self)
     """
+
+    id = Column(String(60), primary_key=True,nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow(), nullable=False)
+    updated_at = Column(DateTime, default=datetime.utcnow(), nullable = False)
+
     def __init__(self, *args, **kwargs):
         """
         Initialize attributes: random uuid,
@@ -30,11 +38,17 @@ class LibrarifyBase:
                     pass
                 else:
                     setattr(self, key, value)
+            if "id" not in kwargs:
+                self.id = str(uuid.uuid4())
+            if "created_at" not in kwargs:
+                self.created_at = datetime.now()
+            if "updated_at" not in kwargs:
+                self.updated_at = datetime.now()
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            models.storage.new(self)
+            #models.storage.new(self)
 
 
     def __str__(self):
@@ -50,6 +64,7 @@ class LibrarifyBase:
         save to serialized file
         """
         self.updated_at = datetime.now()
+        models.storage.new(self)
         models.storage.save()
 
     def to_dict(self):
@@ -64,4 +79,6 @@ class LibrarifyBase:
                 dictFormat[key] = value.isoformat()
             else:
                 dictFormat[key] = value
+        if '_sa_instance_state' in dictFormat:
+            del dictFormat['_sa_instance_state']
         return  dictFormat
