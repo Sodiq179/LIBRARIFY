@@ -79,6 +79,12 @@ header {
     list-style-type: none;
     display: inline-block;
     margin-right: 10px;
+    
+}
+
+.navList ul li:hover {
+    color: blueviolet;
+    cursor: pointer;
 }
 
 .navList ul li:last-child {
@@ -99,6 +105,7 @@ header {
 
 .lifetxt{
     width: 60%;
+    flex-basis: 37%S;
 }
 .mag_content{
     display: flex;
