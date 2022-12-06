@@ -78,8 +78,8 @@ header {
 .navList ul li {
     list-style-type: none;
     display: inline-block;
-    margin-right: 10px;
-    
+    margin-right: 15px;
+    align-content: flex-end;    
 }
 
 .navList ul li:hover {
