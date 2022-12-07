@@ -15,6 +15,7 @@ body {
 }
 .about {
     background-image: url(images/back.jpg);
+    background-size: cover;
     display: block;
     margin: 25px;
     border: 1px;
@@ -23,24 +24,32 @@ body {
 }
 .hd {
     text-align: justify;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
 }
 
 .abli {
     font-family: Roboto,Arial,Helvetica,sans-serif;
-    color: darkgoldenrod;
+    color: rgb(136, 39, 87);
 }
 
-h1 {
+.ablih1 {
     text-align: center;
     font-family:'Courier New', Courier;
-    color: brown;
+    font-size: 40px;
+    color: blueviolet;
+}
+
+h2 {
+    color: blueviolet;
 }
 
 p {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
     letter-spacing: 0;
-    line-height: 26px;
+    line-height: 30px;
 }
 
 header {
@@ -51,6 +60,10 @@ header {
 .docmentry {
     margin: 0;
     padding: 0;
+}
+
+.documentaryHeader{
+    display: inline-flex;
 }
 
 .documentaryAlign, .navAlign {
@@ -73,17 +86,24 @@ header {
 }
 .navList ul {
     padding: 0;
+    
+
 }
 
 .navList ul li {
     list-style-type: none;
     display: inline-block;
     margin-right: 15px;
-    align-content: flex-end;    
+    align-content: flex-end;
 }
 
-.navList ul li:hover {
+.navList ul li :hover {
     color: blueviolet;
+    cursor: pointer;
+}
+
+.navList ul li :active {
+    color: lightcoral;
     cursor: pointer;
 }
 
@@ -105,7 +125,7 @@ header {
 
 .lifetxt{
     width: 60%;
-    flex-basis: 37%S;
+    flex-basis: 70%;
 }
 .mag_content{
     display: flex;
@@ -116,10 +136,10 @@ header {
     justify-content: space-between;
 }
 .magtxt{
-    width: 60%;
+    width: 70%;
 }
 .newtxt{
-    width: 60%;
+    width: 70%;
 }
 
 footer {
@@ -129,6 +149,11 @@ footer {
 
 .footerIcons a {
     margin-right: 10px;
+    color: rgb(63, 63, 122);
+}
+.fut_h1{
+    color: rgb(20, 3, 66);
+    text-align: center;
 }
 
 .footerIcons a:last-child {
