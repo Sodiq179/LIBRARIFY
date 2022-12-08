@@ -23,7 +23,7 @@ body {
     text-align: center;
 }
 .hd {
-    text-align: justify;
+    text-align: center;
     width: 50%;
     margin: auto;
     justify-content: center;
@@ -62,8 +62,9 @@ header {
     padding: 0;
 }
 
-.documentaryHeader{
+.documentaryHeader {
     display: inline-flex;
+    margin: 2px auto;
 }
 
 .documentaryAlign, .navAlign {
@@ -72,11 +73,16 @@ header {
 }
 
 .documentaryImg {
-    width: 48%;
+    width: 60%;
 }
 
 .documentaryTxt {
     width: 60%;
+}
+
+.edu_img {
+    width: 60%;
+    margin: auto;
 }
 
 .bar {
@@ -118,28 +124,52 @@ header {
     width: 60%;
 }
 
-.lif_content{
+.lif_content {
     display: flex;
     justify-content: space-between;
+}
+
+.lif_img {
+    width: 70%;
+    margin: auto;
 }
 
 .lifetxt{
     width: 60%;
     flex-basis: 70%;
 }
-.mag_content{
+.mag_content {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    height: 60%;
+}
+
+.mag_img {
+    width: 65%;
+    margin: auto;
+    height: 70%;
+}
+
+.new_content {
     display: flex;
     justify-content: space-between;
+    margin: auto;
+    height: 70%;
 }
-.new_content{
-    display: flex;
-    justify-content: space-between;
+
+.new_img {
+    width: 75%;
+    margin: auto;
 }
-.magtxt{
+
+.magtxt {
     width: 70%;
+    max-width: auto;
 }
-.newtxt{
-    width: 70%;
+.newtxt {
+    width: 60%;
+    margin: auto;
 }
 
 footer {
@@ -151,7 +181,7 @@ footer {
     margin-right: 10px;
     color: rgb(63, 63, 122);
 }
-.fut_h1{
+.fut_h1 {
     color: rgb(20, 3, 66);
     text-align: center;
 }
