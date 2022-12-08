@@ -1,6 +1,6 @@
 body {
     text-align:justify ;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     margin: auto;
     font-family: Roboto,Arial,Helvetica,sans-serif;
 
@@ -28,5 +28,7 @@ a {
 
 
 footer {
-    position: bottom;
+    background-color: grey;
+    padding: 40px 0;
+    height: 30%;
 }
