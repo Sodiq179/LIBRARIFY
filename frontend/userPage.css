@@ -1,17 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+}
+
 body {
-    text-align:justify ;
-    background-color: rgb(255, 255, 255);
+    text-align:justify;
+    background-color: white;
     margin: auto;
     font-family: Roboto,Arial,Helvetica,sans-serif;
-
+    display: block;
 }
+
 a {
     text-decoration: none;
     color: #000;
+    font-weight: bold;
 }
 
+.container {
+    width: 98%;
+    margin: auto;
+}
 
+.logo_home {
+    display: flex;
+    justify-content: space-between;
+}
 
+.home :hover {
+    color: blueviolet;
+    cursor: pointer;
+}
+
+header {
+    height: 40px;
+}
+
+.nav_img{
+    width: 30px;
+    height: 30px;
+    position: left;
+} 
+
+.navAlign {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navList ul {
+    padding: 0;
+    
+
+}
+
+.navList ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 15px;
+    align-content: flex-end;
+}
+
+.navList ul li :hover {
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.navList ul li :active {
+    color: lightcoral;
+    cursor: pointer;
+}
+
+.navList ul li:last-child {
+    margin-right: 0;
+}
 
 
 
@@ -30,5 +93,20 @@ a {
 footer {
     background-color: grey;
     padding: 40px 0;
-    height: 30%;
+    height: 50px;
+    width: 100%;
+    }
+
+.footerIcons a {
+    margin-right: 10px;
+    color: rgb(63, 63, 122);
+}
+.fut_h1 {
+    color: rgb(20, 3, 66);
+    text-align: center;
+    font-size: 19px;
+}
+
+.footerIcons a:last-child {
+    margin-right: 0;
 }
