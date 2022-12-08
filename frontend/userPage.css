@@ -1,0 +1,32 @@
+body {
+    text-align:justify ;
+    background-color: white;
+    margin: auto;
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    position: bottom;
+}
