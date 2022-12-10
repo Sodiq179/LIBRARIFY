@@ -14,7 +14,7 @@ body {
     margin: auto;
 }
 .about {
-    background-image: url(images/back.jpg);
+    background-image: url(../images/back.jpg);
     background-size: cover;
     display: block;
     margin: auto;
@@ -46,7 +46,7 @@ body {
 
 h2 {
     color: blueviolet;
-	
+    text-decoration: underline;
 }
 
 p {
@@ -55,15 +55,16 @@ p {
     letter-spacing: 0;
     line-height: 30px;
 }
+
 b {
 	background-color: rgba(0, 0, 254, 0.3);
     font-size: 30px;
-    color: rgb(218, 235, 122)
+    color: rgb(218, 235, 122);
 }
 
 header {
     padding: 20px;
-    background-color: #F3F3F3;
+    background-color: #e6e6e6;
     height: 30px;
 }
 
@@ -203,7 +204,9 @@ header {
 }
 
 .footer_container {
+    margin: auto;
 	height: 70px;
+	bottom: 5px;
 }
 
 footer {
@@ -215,6 +218,10 @@ footer {
 .footerIcons a {
     margin-right: 10px;
     color: rgb(63, 63, 122);
+}
+
+.fut{
+	height:40px;
 }
 .fut_h1 {
     color: rgb(20, 3, 66);

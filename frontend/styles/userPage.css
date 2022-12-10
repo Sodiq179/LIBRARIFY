@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /*box-sizing: content-box;*/
     font-family: Roboto,Arial,Helvetica,sans-serif;
 }
 
@@ -9,7 +9,6 @@ body {
     text-align:justify;
     background-color: white;
     margin: auto;
-    font-family: Roboto,Arial,Helvetica,sans-serif;
     display: block;
 }
 
@@ -36,6 +35,7 @@ a {
 
 header {
     height: 40px;
+    background-color: rgb(204, 198, 198);
 }
 
 .nav_img{
@@ -93,9 +93,18 @@ header {
 footer {
     background-color: grey;
     padding: 40px 0;
-    height: 50px;
+    height: 40px;
+	bottom: 0;
+	/*position: fixed;*/
+	margin: auto;
     width: 100%;
-    }
+}
+
+.footer_container {
+    margin: auto;
+	height: 50px;
+	bottom: 0;
+}
 
 .footerIcons a {
     margin-right: 10px;
@@ -105,6 +114,9 @@ footer {
     color: rgb(20, 3, 66);
     text-align: center;
     font-size: 19px;
+}
+.fut{
+	height:40px;
 }
 
 .footerIcons a:last-child {
