@@ -1,13 +1,13 @@
-    Links an amenity object to a place
+    Create a new Book
     ---
     tags:
-      - Amenities
+      - Books
     parameters:
-      - name: amenity_id
+      - name: book_id
         in: body
         required: true
         requires:
-          - name
+          - title
         properties:
           name:
             type: string

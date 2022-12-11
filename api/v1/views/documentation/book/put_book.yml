@@ -1,13 +1,13 @@
-    Updates an amenity
+    Updates a book
     ---
     tags:
-      - Amenities
+      - Books
     parameters:
-      - name: amenity_id
+      - name: book_id
         in: path
         type: string
         required: true
-        description: The id of the amenity
+        description: The id of the book
       - name: update_request
         in: body
         required: true

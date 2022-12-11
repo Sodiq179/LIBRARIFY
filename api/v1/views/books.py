@@ -60,8 +60,8 @@ def post_book():
     if not request.get_json():
         abort(400, description="Not a JSON")
 
-    if 'name' not in request.get_json():
-        abort(400, description="Missing name")
+    if 'title' not in request.get_json():
+        abort(400, description="Missing title")
 
     data = request.get_json()
     instance = Book(**data)
@@ -79,7 +79,7 @@ def put_book(book_id):
     if not request.get_json():
         abort(400, description="Not a JSON")
 
-    ignore = ['id', 'created_at', 'updated_at']
+    ignore = ['id', 'created_at', 'updated_at', 'title']
 
     book = storage.get(Book, book_id)
 

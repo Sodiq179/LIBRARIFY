@@ -1,16 +1,16 @@
-gets amenity by ID
+gets book by ID
 ---
 tags:
-  - Amenities
+  - Books
 parameters:
-  - name: amenity_id
+  - name: book_id
     in: path
     type: string
     required: true
-    description: The id of the amenity
+    description: The id of the book
 responses:
   404:
-    description: amenity not found.
+    description: book not found.
   200:
     description: request executed successfully
     schema:
@@ -26,6 +26,6 @@ responses:
         id:
           type: string
           description: The uuid of the instance
-        name:
+        title:
            type: string
-           description: amenity name
+           description: book title
