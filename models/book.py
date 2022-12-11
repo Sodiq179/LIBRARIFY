@@ -31,3 +31,13 @@ class Book(LibrarifyBase, Base):
         image_url=""
         book_api=""
         publisher=""
+
+    def reviews(self):
+        """getter attribute returns the list of Review instances"""
+        from models.book_review import Review
+        review_list = []
+        all_reviews = models.storage.all(Review)
+        for review in all_reviews.values():
+            if review.book_id == self.id:
+                review_list.append(review)
+        return review_list
