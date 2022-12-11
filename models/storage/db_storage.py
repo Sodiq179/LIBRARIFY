@@ -9,6 +9,8 @@ from models.user import User
 from models.book import Book
 from models.book_review import Review
 
+
+classes = {"Book": Book,"Review": Review, "User": User}
 class DBStorage:
     """ create tables in environmental"""
     __engine = None
@@ -78,3 +80,22 @@ class DBStorage:
         """ calls remove()
         """
         self.__session.close()
+
+    def get(self, cls, id):
+        """Retrievs one objet of a class"""
+        objects = self.__session.query(classes[cls])
+        for obj in objects:
+            if obj.id == id:
+                return obj
+        return None
+
+    def count(self, cls=None):
+        """
+        Returns the number of objects in storage matching the given class name.
+        If no name is passed, returns the count of all objects in storage.
+        """
+        nobjects = 0
+        for clss in classes:
+            if cls is None or cls is classes[clss] or cls is clss:
+                nobjects += len(self.__session.query(classes[clss]).all())
+        return nobjects
