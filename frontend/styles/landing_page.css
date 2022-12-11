@@ -5,14 +5,14 @@ a {
 
 body {
     text-align:justify ;
-    background-color: white;
+    background-color: #f5ebe0;
     margin: auto;
     font-family: Roboto,Arial,Helvetica,sans-serif;
 }
-.container {
+/* .container {
     width: 95%;
     margin: auto;
-}
+} */
 .about {
     background-image: url(../images/back.jpg);
     background-size: cover;
