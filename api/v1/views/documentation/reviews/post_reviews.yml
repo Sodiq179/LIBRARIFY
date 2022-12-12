@@ -3,11 +3,11 @@
     tags:
       - Reviews
     parameters:
-      - name: place_id
+      - name: book_id
         in: path
         type: string
         required: true
-        description: The id of the Place to link to
+        description: The id of the Book to link to
       - name: user_id and text
         in: body
         required: true
