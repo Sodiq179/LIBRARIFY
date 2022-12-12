@@ -9,15 +9,17 @@ body {
     margin: auto;
     font-family: Roboto,Arial,Helvetica,sans-serif;
 }
-/* .container {
-    width: 95%;
+
+.container {
+    width: 100%;
     margin: auto;
-} */
+}
+
 .about {
     background-image: url(../images/back.jpg);
     background-size: cover;
     display: block;
-    margin: auto;
+    margin: 2px auto;
     border: 1px;
     padding: 50px;
     text-align: center;
@@ -65,7 +67,7 @@ b {
 header {
     padding: 20px;
     background-color: #e6e6e6;
-    height: 30px;
+    height: 50%;
 }
 
 .logo_home {
@@ -86,6 +88,11 @@ header {
 .documentaryHeader {
     display: inline-flex;
     margin: 2px auto;
+}
+
+.navAlign {
+	margin: auto;
+	width: 100%;
 }
 
 .documentaryAlign, .navAlign {
@@ -212,7 +219,7 @@ header {
 footer {
     background-color: grey;
     padding: 40px 0;
-    height: 50px;
+    height: 120px;
 }
 
 .footerIcons a {
