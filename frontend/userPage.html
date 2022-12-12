@@ -1,3 +1,8 @@
+<?php 
+	require "../private/autoload.php";
+	$user_data = check_login($con);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,7 +27,7 @@
                     <div class="navList">
                         <ul>
                             <li><a href="landing_page.html"><i class="fa fa-book"></i>About</a></li>
-                            <li><a href="signin-signup.html"><i class="fa fa-sign-out"></i>Logout</a></li>
+                            <li><a href="php_file/logout.php"><i class="fa fa-sign-out"></i>Logout</a></li>
                         </ul>
                     </div>
                 </nav>
