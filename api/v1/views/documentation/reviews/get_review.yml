@@ -23,12 +23,12 @@ responses:
            description: time of last update of the instance
         id:
           type: string
-          description: The uuid of the state instance
+          description: The uuid of the review instance
         text:
            type: string
-           description: Description of the place
-        place_id:
+           description: Description of the book
+        book_id:
            type: string
-           description: uuid of the place
+           description: uuid of the book
   404:
     description: Place not found

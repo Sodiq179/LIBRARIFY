@@ -1,0 +1,15 @@
+    Removes a Book
+    ---
+    tags:
+      - Books
+    parameters:
+      - name: book_id
+        in: path
+        type: string
+        required: true
+        description: the unique id of the book
+    responses:
+      404:
+        description: book not found
+      200:
+        description: request executed successfully

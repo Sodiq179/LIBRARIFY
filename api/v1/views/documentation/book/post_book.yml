@@ -1,19 +1,19 @@
-    Posts a new state.
+    Create a new Book
     ---
     tags:
-      - States
+      - Books
     parameters:
-      - name: request
+      - name: book_id
         in: body
         required: true
         requires:
-          - name
+          - title
         properties:
           name:
             type: string
 
     responses:
       400:
-        description: Missing name or Not Valid JSON
+        description: Not a JSON
       201:
-        description: Request completed successfully
+        description: request executed successfully
