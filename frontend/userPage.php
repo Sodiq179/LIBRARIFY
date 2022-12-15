@@ -1,5 +1,5 @@
 <?php 
-	require "../private/autoload.php";
+	require "php_file/private/autoload.php";
 	$user_data = check_login($con);
 ?>
 
@@ -21,13 +21,13 @@
                     <div class="logo_home">
                         <img  class="nav_img" src="images/book.png" alt="logo" onerror="this.style.display = 'none'">
                         <div class="home">
-                        <a href="index.html"><i class="fa fa-home"></i>Home</a>
+                        <a href="index.php"><i class="fa fa-home"></i>Home</a>
                         </div>
                     </div>
                     <div class="navList">
                         <ul>
-                            <li><a href="landing_page.html"><i class="fa fa-book"></i>About</a></li>
-                            <li><a href="php_file/logout.php"><i class="fa fa-sign-out"></i>Logout</a></li>
+                            <li><a href="landing_page.php"><i class="fa fa-book"></i>About</a></li>
+                            <li><a href="php_file/sign_file/logout.php"><i class="fa fa-sign-out"></i>Logout</a></li>
                         </ul>
                     </div>
                 </nav>

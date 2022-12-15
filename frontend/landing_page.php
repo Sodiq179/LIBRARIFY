@@ -16,13 +16,13 @@
                 <div class="logo_home">
                     <img class="nav_img" src="images/book.png" alt="logo" onerror="this.style.display = 'none'">
                 <div class="home">
-                    <a href="index.html"><i class="fa fa-home"></i>Home</a>
+                    <a href="index.php"><i class="fa fa-home"></i>Home</a>
                 </div>
                 </div>
                 <div class="navList">
                     <ul>
-                        <li><a href="signin-signup.html"><i class="fa fa-user-circle"></i>Login</a></li>
-                        <li><a href="signin-signup.html"><i class="fa fa-sign-in"></i>Sign up</i></a></li>
+                        <li><a href="signin-signup.php"l><i class="fa fa-user-circle"></i>Login</a></li>
+                        <li><a href="signin-signup.php"><i class="fa fa-sign-in"></i>Sign up</i></a></li>
                     </ul>
                 </div>
             </nav>

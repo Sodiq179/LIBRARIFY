@@ -14,8 +14,14 @@
     <div class="container">
         <div class="signin-signup">
 
-            <form action="php_file/login.php" method="POST" class="sign-in-form">
-                <h2 class="title">Sign in</h2>
+	    <form action="php_file/sign_file/login.php"method="POST" class="sign-in-form">
+		<div><?php
+			if(isset($Error) && $Error != "")
+			{
+				echo $Error;
+			}
+		?></div>
+		<h2 class="title">Sign in</h2>
                 <div class="input-field">
                     <i class="fas fa-user"></i>
                     <input type="text" name="username" required placeholder="Username">
@@ -28,15 +34,21 @@
                 <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
             </form>
 
-            <form action="php_file/signup.php" method="POST" class="sign-up-form">
+	    <form action="php_file/sign_file/signup.php" method="POST" class="sign-up-form">
+		 <div><?php
+                        if (isset($Error) && $Error != "")
+                        {
+                                echo $Error;
+                        }
+                ?></div>
                 <h2 class="title">Sign up</h2>
                 <div class="input-field">
                     <i class="fas fa-user"></i>
-                    <input type="text" name="username" required placeholder="Username">
+                    <input type="text" name="username" value="<?=$username?>"required placeholder="Username">
                 </div>
                 <div class="input-field">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" name="email" required placeholder="Email">
+		    <input type="email" name="email" value="<?$email?>"required placeholder="Email">
                 </div>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>

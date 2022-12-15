@@ -17,7 +17,7 @@
             <h1 class="header">Librarify</h1>
             <div class="signin-signup">
                 <form action="" class="button1">
-                    <a href="signin-signup.html"><button type="button" class="btn btn-primary">Sign in/Sign up</button></a> 
+                    <a href="signin-signup.php"><button type="button" class="btn btn-primary">Sign in/Sign up</button></a> 
                 </form>    
             </div>
             <div class="welcomenote">

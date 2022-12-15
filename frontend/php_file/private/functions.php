@@ -27,7 +27,7 @@ function check_login($con)
 	}
 
 	//redirect to login
-	header("Location: login.php");
+	header("Location: signin-signup.php");
 	die;
 
 }
@@ -47,7 +47,7 @@ function get_random_string($length)
 
 	for ($i = 0; $i < $len; $i++)
 	{
-		$random = rand(0, 62);
+		$random = rand(0, $length);
 		$text .= $array[$random];
 	}
 
